@@ -1,0 +1,94 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+local Main = Library:NewWindow("ABJ")
+
+local Tab1 = Main:NewSection("Stuff")
+
+Tab1:CreateToggle("Lazer (Gojo)", function(Value)
+    LazerBeam = Value
+end)
+
+task.spawn(function()
+  while task.wait() do
+    if LazerBeam then
+       local args = {
+    [1] = "HollowPurple",
+    [2] = "HollowPurpleThrow"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GojoRemotes"):FireServer(unpack(args))
+
+    end
+  end
+end)
+Tab1:CreateToggle("Lag (Gojo)", function(Value)
+    lag = Value
+end)
+
+task.spawn(function()
+  while task.wait() do
+    if lag then
+   game:GetService("ReplicatedStorage").GojoRemotes:FireServer("Limitless","On")
+
+    end
+  end
+end)
+Tab1:CreateToggle("BigWhiteBalls (hyper sonic)", function(Value)
+   HyperBall = Value
+end)
+task.spawn(function()
+  while task.wait() do
+    if HyperBall then
+   game:GetService("ReplicatedStorage").HyperBlast:FireServer()
+    end
+  end
+end)
+Tab1:CreateToggle("Bones (X GASTER)", function(Value)
+   Bonerrr = Value
+end)
+task.spawn(function()
+  while task.wait() do
+    if Bonerrr then
+   game:GetService("ReplicatedStorage").XXPerseveranceBone:FireServer()
+    end
+  end
+end)
+Tab1:CreateToggle("Blasterss (X Gaster)", function(Value)
+   Blasters = Value
+end)
+task.spawn(function()
+  while task.wait() do
+    if Blasters then
+   game:GetService("ReplicatedStorage").XXDeterminationBlaster:FireServer()
+    end
+  end
+end)
+Tab1:CreateToggle("BigGenos", function(Value)
+   FullPower = Value
+end)
+task.spawn(function()
+  while task.wait() do
+    if FullPower then
+   game:GetService("ReplicatedStorage").IncinerateFullPower:FireServer()
+    end
+  end
+end)
+Tab1:CreateToggle("SmallGenos", function(Value)
+   Incineration = Value
+end)
+task.spawn(function()
+  while task.wait() do
+    if Incineration then
+   game:GetService("ReplicatedStorage").Incinerate:FireServer()
+    end
+  end
+end)
+Tab1:CreateToggle("Soul Switch", function(Value)
+   SoulSwitch = Value
+end)
+task.spawn(function()
+  while task.wait() do
+    if SoulSwitch then
+   game:GetService("ReplicatedStorage").SoulSwitch:FireServer()
+    end
+  end
+end)
